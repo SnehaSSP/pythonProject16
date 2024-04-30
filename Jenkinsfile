@@ -12,12 +12,12 @@ pipeline {
         stage('Run Python Scripts') {
             steps {
                 // Run the first Python script
-                sh 'lab3.py'
+                sh 'Mytest_lab.py'
                 
                 // Run the second Python script
-                sh 'mytest_lab.py'
+                sh 'lab3.py'
 
-                sh 'mytestlab1.py'
+                sh 'mytest_lab1.py'
             }
         }
     }
