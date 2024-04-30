@@ -1,1 +1,1 @@
-print("x + y + z")
+print("you are beautiful and brilliant")
