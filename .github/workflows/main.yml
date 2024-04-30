@@ -1,0 +1,21 @@
+name: GitHub Actions For Latest Python Files
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: macos-latest # Use macOS runner for Mac
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 # Use the appropriate Python version
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Run Mytest_lab.py
+        run: python Mytest_lab.py
+        working-directory: ${{ github.workspace }} # Change directory to where Mytest_lab.py is located
+      - name: Run mytest_lab1.py
+        run: python mytest_lab1.py
+        working-directory: ${{ github.workspace }} # Change directory to where mytest_lab1.py is located
